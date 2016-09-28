@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Retesting suite" parallel="classes">
+	<test name="Retesting">
+		<groups>
+			<run>
+				<include name="Smoke"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="selenium.testng.frames.Googlesearch">
+
+			</class>
+			<class name="selenium.testng.frames.Googlemaps"></class>
+			<class name="selenium.testng.frames.Googlenews"></class>
+			<!-- <class name="selenium.testng.frames.videos"> </class> -->
+		</classes>
+	</test>
+	<test name="Retestings">
+		<groups>
+			<run>
+				<include name="Retest"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="selenium.testng.frames.Googlesearch"></class>
+			<class name="selenium.testng.frames.Googlenews"></class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,16 @@
+#Author: ramireddy591@gmail.com
+
+@tag
+Feature: facebook login
+
+@tag2
+Scenario Outline: facebook login
+Given browser as "Firefox" And  url as "https://www.facebook.com"
+When username as <username> And password as <password>
+Then I verify the <status> in step
+
+Examples:
+    | browser  |url                     | username              |password  |status|
+    | Firefox  |https://www.facebook.com| ramireddy591@gmail.com|9989593467|pass  |
+    | chrome   |https://www.facebook.com| ramireddy591@gmail.com|9989593467|pass  |
+    | IE       |https://www.facebook.com| ramireddy591@gmail.com|9989593467|pass  |

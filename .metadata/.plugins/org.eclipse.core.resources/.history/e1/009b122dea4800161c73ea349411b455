@@ -1,0 +1,34 @@
+package dinesh;
+
+ class Vechile {
+	void car()
+	{
+		System.out.println("going");	
+	}
+void bike()
+{
+	System.out.println("horn");
+}
+
+
+ }
+class Car extends Vechile
+{
+	void car()
+	{
+		System.out.println("three wheels");
+	}
+	
+	public static void main(String[] args)
+	
+	{
+		Car c=new Car();
+		c.car();
+		c.bike();
+	}
+		
+	}
+
+
+
+

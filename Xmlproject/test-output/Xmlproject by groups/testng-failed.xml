@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Xmlproject by groups]">
+  <test name="GRP-Retest,Smoke(failed)">
+    <groups>
+      <run>
+        <include name="Retest"/>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="selenium.testng.frames.Googlevideos">
+        <methods>
+          <include name="videos"/>
+        </methods>
+      </class> <!-- selenium.testng.frames.Googlevideos -->
+      <class name="selenium.testng.frames.Googlenews">
+        <methods>
+          <include name="news"/>
+          <include name="linkclick"/>
+        </methods>
+      </class> <!-- selenium.testng.frames.Googlenews -->
+    </classes>
+  </test> <!-- GRP-Retest,Smoke(failed) -->
+</suite> <!-- Failed suite [Xmlproject by groups] -->

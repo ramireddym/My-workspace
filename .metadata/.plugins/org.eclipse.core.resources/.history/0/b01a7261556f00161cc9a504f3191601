@@ -1,0 +1,25 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Sentsmspage {
+	WebDriver driver;
+	public Sentsmspage(WebDriver driver) {
+		this.driver=driver;	
+	}
+	public void sentsms()
+	{
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("by2Frame");
+		driver.findElement(By.id("aSentBox")).click();
+		driver.findElement(By.id("selectDate")).click();
+		driver.findElement(By.linkText("30")).click();
+		driver.findElement(By.xpath("//input[@value='Get Data']")).click();
+		driver.findElement(By.xpath("html/body/form/div/section/div[2]/div[1]/table/tbody/tr[2]/td[3]/a")).click();
+		driver.findElement(By.xpath("//input[@value='3638599']")).isSelected();
+		
+	}
+	
+
+}

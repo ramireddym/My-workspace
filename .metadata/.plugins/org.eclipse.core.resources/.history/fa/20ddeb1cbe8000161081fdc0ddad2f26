@@ -1,0 +1,22 @@
+package Keyworddrivenframework;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Xls_Reader {
+
+	public Xls_Reader(String string) {
+		
+	}
+
+	public XSSFWorkbook getworkBook() {
+		
+		return null;
+	}
+
+	public XSSFSheet getSheetByIndex(XSSFWorkbook workbook, int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

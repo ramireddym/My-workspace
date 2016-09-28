@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestAll">
+	<test name="order">
+		<classes>
+			<class name="google.free.codes.Googlecodes" >
+			<methods>
+			<include name="googlesearching"></include>
+			<include name="search"></include>
+			</methods>
+			</class>
+			<class name="google.free.codes.Googlenews">
+			<methods>
+			<include name="news"></include>
+			<exclude name="linkclick"></exclude>
+			</methods>
+			</class>
+			<class name="google.free.codes.Googlemaps">
+			<methods>
+			<include name="googlevideos"></include>
+			</methods>
+			</class>
+			<class name="google.free.codes.googlevideos">
+			<methods>
+			<include name="Googlemaps"></include>
+			</methods>
+			</class>	
+		</classes>
+	</test>
+
+</suite>

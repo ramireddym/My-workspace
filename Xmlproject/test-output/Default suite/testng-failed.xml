@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="seleniumtestngframeworks.Googlesearch">
+        <methods>
+          <include name="name5"/>
+          <include name="name8"/>
+          <include name="name7"/>
+          <include name="name1"/>
+          <include name="name4"/>
+          <include name="name3"/>
+          <include name="name6"/>
+          <include name="googlesearching"/>
+          <include name="name2"/>
+        </methods>
+      </class> <!-- seleniumtestngframeworks.Googlesearch -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,27 @@
+package seleniumbasics;
+
+import junit.framework.Assert;
+
+import org.apache.commons.el.EqualsOperator;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class facebookolgin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.facebook.com");
+		driver.findElement(By.id("email")).sendKeys("ramireddy591@gmail.com");
+		driver.findElement(By.id("pass")).sendKeys("9989593467");
+		driver.findElement(By.id("loginbutton")).click();
+		Alert alert=driver.switchTo().alert();
+		System.out.println(alert.getText());
+		Assert.assertEquals(alert.getText(),"bfbdhjbfhjfb");
+		alert.accept();
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class Gmailllogin {
+	WebDriver driver;
+	@Given("^URL as \"([^\"]*)\" And browser as \"([^\"]*)\"$")
+	public void url_as_And_browser_as(String url, String browser) throws Throwable {
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://accounts.google.com/ServiceLogin#identifier");
+	    
+	    throw new PendingException();
+	}
+
+	@When("^username is \"([^\"]*)\"$")
+	public void username_is(String username) throws Throwable {
+	    WebElement element=driver.findElement(By.id("Email"));
+	    element.clear();
+	    element.sendKeys("ramireddy591");
+	    throw new PendingException();
+	}
+
+	@When("^password is \"([^\"]*)\"$")
+	public void password_is(String password) throws Throwable {
+		 WebElement element=driver.findElement(By.id("Email"));
+		    element.clear();
+		    element.sendKeys("ramireddy591");
+	    throw new PendingException();
+	}
+
+	@Then("^Verify Gmail Home Page$")
+	public void verify_Gmail_Home_Page() throws Throwable {
+	    
+	    throw new PendingException();
+	}
+
+	@Then("^Gmail Home Page$")
+	public void gmail_Home_Page() throws Throwable {
+	   
+	    throw new PendingException();
+	}
+
+}

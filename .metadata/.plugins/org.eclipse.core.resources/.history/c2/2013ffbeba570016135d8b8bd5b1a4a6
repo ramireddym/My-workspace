@@ -1,0 +1,39 @@
+package seleniumbasics;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Htmlwebpagetest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		driver.get("file:///D:/Ramireddy/SeleniumTest/home.html");
+		driver.switchTo().frame("myNavigation");
+		driver.findElement(By.linkText("tree")).click();
+		driver.findElement(By.linkText("Handle Alert")).click();
+		Alert alert=driver.switchTo().alert();
+		alert.accept();
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("subFrame");
+		driver.switchTo().frame("frameHeader");
+		WebElement myHeader=driver.findElement(By.xpath("html/body/div[1]/h3"));
+		System.out.println(myHeader.getText());
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("subFrame");
+		driver.switchTo().frame("frameDetail");
+	     driver.findElement(By.id("myBtn2")).click();
+	     driver.switchTo().defaultContent();
+	     driver.switchTo().frame("myDetail");
+	     WebElement select1=driver.findElement(By.id("mySelect"));
+	     Select select= new Select("select1");
+	     select.selectByVisibleText("option3");
+		
+
+	}
+
+}

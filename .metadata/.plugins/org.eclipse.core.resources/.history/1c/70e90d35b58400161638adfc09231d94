@@ -1,0 +1,50 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class facebooklogintests {
+	WebDriver driver;
+	@Given("^Browser as firefox And Url as http://www\\.facebook\\.com$")
+	public void browser_as_firefox_And_Url_as_http_www_facebook_com() throws Throwable {
+	  
+	}
+
+	@When("^Username as ramireddy(\\d+)@gmail\\.com And Password as (\\d+)$")
+	public void username_as_ramireddy_gmail_com_And_Password_as(int arg1, int arg2) throws Throwable {
+		WebElement ele=driver.findElement(By.id("email"));
+		ele.clear();
+		ele.sendKeys(arg1);
+		WebElement el=driver.findElement(By.id("pass"));
+		el.clear();
+		el.sendKeys(arg2);
+		driver.findElement(By.id("loginbutton")).click();
+	   
+	}
+
+	@Then("^Facebook Should be login Sucessfully$")
+	public void facebook_Should_be_login_Sucessfully() throws Throwable {
+		System.out.println("welcome to facebook");
+	   
+	}
+
+	@Given("^Browser as Chrome And Url as http://www\\.facebook\\.com$")
+	public void browser_as_Chrome_And_Url_as_http_www_facebook_com() throws Throwable {
+		System.setProperty("webdriver.chrome.driver","D:\\Venkata Rami Reddy\\testing softwares\\chromedriver.exe");
+		driver=new ChromeDriver();	
+	}
+
+	@Given("^Browser as IE And Url as http://www\\.facebook\\.com$")
+	public void browser_as_IE_And_Url_as_http_www_facebook_com() throws Throwable {
+		System.setProperty("webdriver.ie.driver", "D:\\Venkata Rami Reddy\\testing softwares\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
+	}
+
+
+}

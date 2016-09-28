@@ -1,0 +1,118 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+
+public class Onlineshopping {
+	WebDriver driver;
+
+	@BeforeClass
+	public void setup()
+	{
+		driver=new FirefoxDriver();
+		driver.get("http://www.ebay.com/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+
+	}
+	@Test
+	public void dropdown()
+	{
+		WebElement mvr=driver.findElement(By.id("gh-cat"));
+		Select select=new Select(mvr);
+		select.selectByVisibleText("Books");
+
+	}
+	@Test
+	public void search()
+	{
+		driver.findElement(By.id("gh-ac")).sendKeys("tendulkar");
+		driver.findElement(By.id("gh-btn")).click();
+		driver.findElement(By.linkText("Playing It My Way : My Autobiography by Sachin Tendulkar")).click();
+		driver.findElement(By.id("qtyTextBox")).clear();
+		
+		
+		driver.findElement(By.id("qtyTextBox")).sendKeys("2");
+		
+		
+		driver.findElement(By.linkText("Buy It Now")).click();
+		
+		
+		
+		driver.findElement(By.id("regTab")).click();
+		driver.findElement(By.id("email")).sendKeys("ramireddy591@gmail.com");
+		driver.findElement(By.id("remail")).sendKeys("ramireddy591@gmail.com");
+		driver.findElement(By.xpath(".//*[@id='showPASSWORD']/ul/li/span[1]/div")).click();
+		driver.findElement(By.id("PASSWORD")).sendKeys("mareddy3");
+		driver.findElement(By.id("firstname")).sendKeys("venkataramireddy");
+		driver.findElement(By.id("lastname")).sendKeys("mareddy");
+		WebElement mvr1=driver.findElement(By.xpath("//div[@class='flag-dropdown']"));
+		Select select=new Select(mvr1);
+		select.selectByVisibleText("India");
+		driver.findElement(By.id("phoneFlagComp1")).sendKeys("9989593467");
+		driver.findElement(By.id("sbtBtn")).click();
+
+	}
+	//	@Test
+	//	public void numberof()
+	//	{
+	//		driver.findElement(By.id("qtyTextBox")).sendKeys("2");
+	//	}
+	//	@Test
+	//	public void buy()
+	//	{
+	//		driver.findElement(By.linkText("Buy It Now")).click();
+	//	}
+
+//	@Test
+//	public void Register()
+//	{
+//		driver.findElement(By.id("regTab")).click();
+//		driver.findElement(By.id("email")).sendKeys("ramireddy591@gmail.com");
+//		driver.findElement(By.id("remail")).sendKeys("ramireddy591@gmail.com");
+//		driver.findElement(By.xpath(".//*[@id='showPASSWORD']/ul/li/span[1]")).click();
+//		driver.findElement(By.id("PASSWORD")).sendKeys("mareddy3");
+//		driver.findElement(By.id("firstname")).sendKeys("venkataramireddy");
+//		driver.findElement(By.id("lastname")).sendKeys("mareddy");
+//		WebElement mvr1=driver.findElement(By.id("selected-flagphoneFlagComp1"));
+//		Select select=new Select(mvr1);
+//		select.selectByVisibleText("India");
+//		driver.findElement(By.id("phoneFlagComp1")).sendKeys("9989593467");
+//		driver.findElement(By.id("sbtBtn")).click();
+//
+//	}
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

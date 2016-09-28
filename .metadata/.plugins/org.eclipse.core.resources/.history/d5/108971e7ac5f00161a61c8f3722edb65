@@ -1,0 +1,31 @@
+package objects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Packtpubsigninpage {
+	
+	WebDriver driver;
+
+	public Packtpubsigninpage(WebDriver driver)
+	{
+		this.driver=driver;
+	}
+	public void signin(String username,String password)
+	{
+		driver.findElement(By.xpath(".//*[@id='account-bar-login-register']/a[1]/div")).click();
+		/*driver.switchTo().frame("iframe");*/
+		/*WebElement element=*/driver.findElement(By.id("email")).sendKeys(username);
+		/*element.clear();
+		element.sendKeys(username);*/
+		WebElement element2=driver.findElement(By.id("password"));
+		element2.clear();
+		element2.sendKeys(password);
+		driver.findElement(By.id("login-form-submit")).click();
+
+
+	}
+
+
+}

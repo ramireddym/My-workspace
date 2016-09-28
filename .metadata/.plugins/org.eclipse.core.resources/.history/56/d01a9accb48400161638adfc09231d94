@@ -1,0 +1,36 @@
+import org.openqa.selenium.WebDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class facebooklogintests {
+	WebDriver driver;
+	@Given("^Browser as firefox And Url as http://www\\.facebook\\.com$")
+	public void browser_as_firefox_And_Url_as_http_www_facebook_com() throws Throwable {
+	  
+	}
+
+	@When("^Username as ramireddy(\\d+)@gmail\\.com And Password as (\\d+)$")
+	public void username_as_ramireddy_gmail_com_And_Password_as(int arg1, int arg2) throws Throwable {
+	   
+	}
+
+	@Then("^Facebook Should be login Sucessfully$")
+	public void facebook_Should_be_login_Sucessfully() throws Throwable {
+	   
+	}
+
+	@Given("^Browser as Chrome And Url as http://www\\.facebook\\.com$")
+	public void browser_as_Chrome_And_Url_as_http_www_facebook_com() throws Throwable {
+	    
+	}
+
+	@Given("^Browser as IE And Url as http://www\\.facebook\\.com$")
+	public void browser_as_IE_And_Url_as_http_www_facebook_com() throws Throwable {
+	   
+	}
+
+
+}

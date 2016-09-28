@@ -1,0 +1,21 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Sentsmspage {
+	WebDriver driver;
+	public Sentsmspage(WebDriver driver) {
+		this.driver=driver;	
+	}
+	public void sentsms()
+	{
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("by2Frame");
+		driver.findElement(By.id("aSentBox")).click();
+		driver.findElement(By.id("selectDate")).click();
+		
+	}
+	
+
+}

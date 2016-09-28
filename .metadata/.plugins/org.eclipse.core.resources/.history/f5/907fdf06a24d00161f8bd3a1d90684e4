@@ -1,0 +1,69 @@
+package dinesh;
+
+public class String2 {
+	
+	public static void main(String[] args) {
+	//String compare by equal//
+		/*String s1="Sachin";  
+		   String s2="Sachin";  
+		   String s3=new String("Sachin");  
+		   String s4="Saurav";  
+		   System.out.println(s1.equals(s2)); 
+		   System.out.println(s1.equals(s3)); 
+		   System.out.println(s1.equals(s4)); */
+		
+		//String compare by ==//
+		   
+		/* String s1="Sachin";  
+		   String s2="Sachin";  
+		   String s3=new String("Sachin");  
+		   System.out.println(s1==s2);
+		   System.out.println(s1==s3);*/
+		   
+		//String compare by compareto//
+		
+		  /* String s1="Sachin";  
+		   String s2="Sachin";  
+		   String s3="Ratan";  
+		   System.out.println(s1.compareTo(s2)); 
+		   System.out.println(s1.compareTo(s3));
+		   System.out.println(s3.compareTo(s1));  */
+		   
+		  //String compare by ignoring case// 
+		   
+		 /*  String s1="sachin";
+		   String s2=s1;
+		   String s3="sachin";
+		   String s4="SACHIN";
+		   boolean Val;
+		   
+		   Val = s1.equals( s2 );
+		  
+		   System.out.println("Returned Value = " + Val );
+
+		      Val = s1.equals( s3 );
+		      System.out.println("Returned Value = " + Val );
+
+		      Val = s1.equalsIgnoreCase( s4 );
+		      System.out.println("Returned Value = " + Val );
+		      
+		      Val = s1.equals( s4 );
+		      System.out.println("Returned Value = " + Val );*/
+		
+		//substring//
+		
+		/*  String s1="Sachin Tendulkar";  
+		   System.out.println(s1.substring(6));  
+		   System.out.println(s1.substring(0,6)); */
+		
+		//Trim//
+		   
+		   String s1="        venkat";
+		   String s2="rami reddy";
+		   System.out.println(s1.trim());
+		   System.out.println(s2.trim());
+		   
+		   
+	}
+
+}

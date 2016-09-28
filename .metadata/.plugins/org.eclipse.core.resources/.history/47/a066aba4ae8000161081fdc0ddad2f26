@@ -1,0 +1,13 @@
+package Keyworddrivenframework;
+
+import org.openqa.selenium.WebDriver;
+
+public class ActionKeywords {
+	WebDriver driver;
+	public void openBrowser(String browsertype)
+	{
+		if(browsertype.equalsIgnoreCase("firefox"))
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package pages;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Myalertspage {
+	WebDriver driver;
+	public Myalertspage(WebDriver driver) {
+		this.driver=driver;	
+	}
+	public void myalert(String name)
+	{
+		driver.switchTo().defaultContent();
+		driver.findElement(By.id("aMyAlerts")).click();
+		driver.switchTo().frame("by2Frame");
+		driver.findElement(By.xpath("//span[@class='date'][text()='2']")).click();
+		Alert alert=driver.switchTo().alert();
+		driver.findElement(By.id("txtName")).sendKeys(name);
+		driver.findElement(By.id("spanCategories")).click();
+		
+	}
+
+}

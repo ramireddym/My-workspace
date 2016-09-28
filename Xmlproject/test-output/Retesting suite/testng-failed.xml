@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Retesting suite]" parallel="classes">
+  <test name="Retesting(failed)" parallel="classes">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="selenium.testng.frames.Googlenews">
+        <methods>
+          <include name="news"/>
+        </methods>
+      </class> <!-- selenium.testng.frames.Googlenews -->
+    </classes>
+  </test> <!-- Retesting(failed) -->
+  <test name="Retestings(failed)" parallel="classes">
+    <groups>
+      <run>
+        <include name="Retest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="selenium.testng.frames.Googlenews">
+        <methods>
+          <include name="linkclick"/>
+        </methods>
+      </class> <!-- selenium.testng.frames.Googlenews -->
+    </classes>
+  </test> <!-- Retestings(failed) -->
+</suite> <!-- Failed suite [Retesting suite] -->

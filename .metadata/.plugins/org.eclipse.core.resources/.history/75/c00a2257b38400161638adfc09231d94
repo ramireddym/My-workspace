@@ -1,0 +1,61 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import cucumber.api.java.After;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class FacebookLogintest {
+WebDriver driver;
+
+@Given("^Browser as \"([^\"]*)\" And Url as \"([^\"]*)\"$")
+public void browser_as_And_Url_as(String browser, String url) throws Throwable {
+	if(browser.equals("Firefox"))
+	{
+		driver=new FirefoxDriver();
+	}
+	else if(browser.equals("IE"))
+	{
+		System.setProperty("webdriver.ie.driver", "D:\\Venkata Rami Reddy\\testing softwares\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
+	}
+	else if(browser.equals("chrome"))
+	{
+		System.setProperty("webdriver.chrome.driver","D:\\Venkata Rami Reddy\\testing softwares\\chromedriver.exe");
+		driver=new ChromeDriver();	 
+	}
+	driver.get(url);
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+}
+
+@When("^Username as satishlanka(\\d+)@gmail\\.com And Password as @(\\d+)@$")
+public void username_as_satishlanka_gmail_com_And_Password_as(String user, String pass) throws Throwable {
+	WebElement ele=driver.findElement(By.id("email"));
+	ele.clear();
+	ele.sendKeys(user);
+	WebElement ele1=driver.findElement(By.id("pass"));
+	ele1.clear();
+	ele1.sendKeys(pass);
+	driver.findElement(By.id("loginbutton")).click();
+}
+
+@Then("^Facebook Should be login Sucessfully$")
+public void facebook_Should_be_login_Sucessfully() throws Throwable {
+	System.out.println("login successfully"); 
+}
+
+public void quite()
+{
+	driver.quit();
+}
+
+}

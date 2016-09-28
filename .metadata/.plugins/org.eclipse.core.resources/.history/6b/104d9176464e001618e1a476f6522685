@@ -1,0 +1,22 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class popups {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		driver.get("http://www.rediff.com/");
+		WebElement sign = driver.findElement(By.xpath("//html/body/div[3]/div[3]/span[4]/span/a"));
+		sign.click();
+		String myWindowHandle = driver.getWindowHandle();
+		driver.switchTo().window(myWindowHandle);
+		WebElement email_id= driver.findElement(By.xpath("//*[@id='signin_info']/a[1]"));
+		email_id.sendKeys("hi");
+	      
+	}
+
+}

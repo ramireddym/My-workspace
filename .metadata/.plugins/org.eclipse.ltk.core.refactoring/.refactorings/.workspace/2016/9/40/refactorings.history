@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;seleniumbasics&apos;" deleteContents="false" description="Delete resource &apos;seleniumbasics&apos;" element1="/seleniumbasics" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1475050467615"/>&#x0A;<refactoring comment="Delete resource &apos;Exampleformultibrowser&apos;" deleteContents="false" description="Delete resource &apos;Exampleformultibrowser&apos;" element1="/Exampleformultibrowser" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1475050484508"/>
+</session>

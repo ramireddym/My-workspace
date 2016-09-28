@@ -1,0 +1,21 @@
+package seleniumbasics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class irctc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.irctc.co.in");
+		driver.findElement(By.xpath(".//*[@id='usernameId']")).sendKeys("rami591");
+		driver.findElement(By.xpath(".//*[@id='loginFormId']/div[1]/div[2]/table[1]/tbody/tr[2]/td[2]/input")).sendKeys("9989593467");
+		//driver.findElement(By.xpath(".//*[@id='loginFormId']/div[1]/div[2]/table[1]/tbody/tr[3]/td[2]/input")).sendKeys("969968");
+		driver.findElement(By.xpath(".//*[@id='otpId']")).click();
+		driver.findElement(By.xpath(".//*[@id='loginbutton']")).click();
+
+	}
+
+}

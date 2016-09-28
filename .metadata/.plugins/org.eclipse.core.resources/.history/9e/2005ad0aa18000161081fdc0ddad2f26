@@ -1,0 +1,22 @@
+#Author: Mareddy Venkataramireddy
+
+@tag
+Feature: Login for LinkedIn
+	Background:
+	Given browser as "Firefox" And URL as "https://www.linkedin.com/"
+@tag1
+Scenario: LinkedIn login
+When  user logs in using Username  And Password
+|ramireddy591@gmail.com|9989593467|
+|mareddy697@gmail.com  |9989593462|
+Then login should be successful 
+
+@tag2
+Scenario Outline: LinkedIn login valid and invalid
+When username<name> and password<pass>
+Then login functionality
+
+Examples:
+   |name                  | pass |
+   |ramireddy591@gmail.com|9989593467|
+   |mareddy697@gmail.com |9989593467|

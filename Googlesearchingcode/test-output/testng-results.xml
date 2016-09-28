@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestAll" duration-ms="10864" started-at="2016-08-10T07:12:26Z" finished-at="2016-08-10T07:12:37Z">
+    <groups>
+    </groups>
+    <test name="order" duration-ms="10864" started-at="2016-08-10T07:12:26Z" finished-at="2016-08-10T07:12:37Z">
+      <class name="google.free.codes.googlevideos">
+        <test-method status="PASS" signature="videos()[pri:0, instance:google.free.codes.googlevideos@776b83cc]" name="videos" duration-ms="2272" started-at="2016-08-10T12:42:34Z" finished-at="2016-08-10T12:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- videos -->
+      </class> <!-- google.free.codes.googlevideos -->
+      <class name="google.free.codes.Googlecodes">
+        <test-method status="PASS" signature="testBeforeSuite()[pri:0, instance:google.free.codes.Googlecodes@152aa092]" name="testBeforeSuite" is-config="true" duration-ms="14" started-at="2016-08-10T12:42:26Z" finished-at="2016-08-10T12:42:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBeforeSuite -->
+        <test-method status="PASS" signature="testBeforeTest()[pri:0, instance:google.free.codes.Googlecodes@152aa092]" name="testBeforeTest" is-config="true" duration-ms="1" started-at="2016-08-10T12:42:26Z" finished-at="2016-08-10T12:42:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBeforeTest -->
+        <test-method status="PASS" signature="googlesearching()[pri:0, instance:google.free.codes.Googlecodes@152aa092]" name="googlesearching" duration-ms="3492" started-at="2016-08-10T12:42:26Z" finished-at="2016-08-10T12:42:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googlesearching -->
+        <test-method status="PASS" signature="search()[pri:0, instance:google.free.codes.Googlecodes@152aa092]" name="search" duration-ms="1" started-at="2016-08-10T12:42:29Z" finished-at="2016-08-10T12:42:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="testAfterTest()[pri:0, instance:google.free.codes.Googlecodes@152aa092]" name="testAfterTest" is-config="true" duration-ms="1" started-at="2016-08-10T12:42:37Z" finished-at="2016-08-10T12:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAfterTest -->
+        <test-method status="PASS" signature="testAfterSuite()[pri:0, instance:google.free.codes.Googlecodes@152aa092]" name="testAfterSuite" is-config="true" duration-ms="0" started-at="2016-08-10T12:42:37Z" finished-at="2016-08-10T12:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAfterSuite -->
+      </class> <!-- google.free.codes.Googlecodes -->
+      <class name="google.free.codes.Googlemaps">
+        <test-method status="PASS" signature="mapclick()[pri:0, instance:google.free.codes.Googlemaps@4ef37659]" name="mapclick" duration-ms="3953" started-at="2016-08-10T12:42:30Z" finished-at="2016-08-10T12:42:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mapclick -->
+      </class> <!-- google.free.codes.Googlemaps -->
+      <class name="google.free.codes.Googlenews">
+        <test-method status="PASS" signature="news()[pri:0, instance:google.free.codes.Googlenews@44a7bfbc]" name="news" duration-ms="1109" started-at="2016-08-10T12:42:29Z" finished-at="2016-08-10T12:42:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- news -->
+      </class> <!-- google.free.codes.Googlenews -->
+    </test> <!-- order -->
+  </suite> <!-- TestAll -->
+</testng-results>

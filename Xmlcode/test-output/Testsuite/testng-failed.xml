@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Testsuite]">
+  <parameter name="url" value="file:///D:/Ramireddy/SeleniumTest/home.html"/>
+  <test name="retesting(failed)">
+    <parameter name="url" value="file:///D:/Ramireddy/SeleniumTest/home.html"/>
+    <classes>
+      <class name="Usexml">
+        <methods>
+          <include name="mvr2"/>
+          <include name="mvr1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Usexml -->
+    </classes>
+  </test> <!-- retesting(failed) -->
+</suite> <!-- Failed suite [Testsuite] -->

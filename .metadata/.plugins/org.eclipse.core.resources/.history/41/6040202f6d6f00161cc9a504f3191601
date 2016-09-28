@@ -1,0 +1,25 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class SMSCollectionpage {
+	WebDriver driver;
+	public SMSCollectionpage(WebDriver driver) {
+		this.driver=driver;	
+	}
+	public void collection()
+	{
+		driver.switchTo().defaultContent();
+		driver.findElement(By.id("aSMSCollection")).click();
+		WebElement element=driver.findElement(By.id("spanCategories"));
+		element.click();
+		Select select=new Select(element);
+		select.selectByVisibleText("Festivals");
+		
+		
+	}
+
+}

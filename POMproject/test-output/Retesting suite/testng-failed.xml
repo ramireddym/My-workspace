@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Retesting suite]">
+  <test name="Retesting(failed)">
+    <classes>
+      <class name="tests.Way2smslogouttests">
+        <methods>
+          <include name="setup"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- tests.Way2smslogouttests -->
+      <class name="tests.Sendsmstests">
+        <methods>
+          <include name="Invalidsendsms"/>
+          <include name="close"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.Sendsmstests -->
+      <class name="tests.Way2smslogintests">
+        <methods>
+          <include name="setup"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- tests.Way2smslogintests -->
+    </classes>
+  </test> <!-- Retesting(failed) -->
+</suite> <!-- Failed suite [Retesting suite] -->

@@ -1,0 +1,22 @@
+package seleniumbasics;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Hdfcnetbanking {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://netbanking.hdfcbank.com/netbanking");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(200,TimeUnit.SECONDS);
+		driver.findElement(By.id("input_password")).sendKeys("67101671");
+		driver.findElement(By.xpath("//a[@ondblclick='return fLogon()']/img")).click();
+
+	}
+
+}

@@ -1,0 +1,34 @@
+@tag
+Feature: Gmail login	
+@tag1
+Scenario: valid login
+Given URL as "https://www.gmail.com" and browser as "firefox"
+When username is "ramireddy591@gmail.com"
+	And password is "9666860641"
+Then Verify Gmail Home Page
+
+	@tag2
+Scenario: Invalid login
+Given URL as "https://www.gmail.com" and browser as "firefox"
+When username is "ramireddy591@gmail.com"
+	And password is "9666841"
+Then show error message
+
+
+@tag3
+Scenario Outline: valid login
+Given I want to write a step with <name>
+When I check for the <value> in step
+Then I verify the <status> in step
+
+@tag4
+Scenario Outline: Invalid login
+Given I want to write a step with <name>
+When I check for the <value> in step
+Then I verify the <status> in step
+
+
+Examples:
+    | name  |value | status |
+    | name1 |  5   | success|
+    | name2 |  7   | Fail   |

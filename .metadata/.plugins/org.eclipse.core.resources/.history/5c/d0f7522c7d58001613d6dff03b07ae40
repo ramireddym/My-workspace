@@ -1,0 +1,18 @@
+import org.junit.BeforeClass;
+import org.openqa.selenium.WebDriver;
+
+
+public class Testngbasics {
+	
+	
+	WebDriver driver;
+		
+		
+	
+	@BeforeClass
+	{
+		driver
+	}
+	 
+
+}

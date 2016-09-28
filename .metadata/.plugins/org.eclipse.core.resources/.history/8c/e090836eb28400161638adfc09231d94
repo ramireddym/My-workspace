@@ -1,0 +1,47 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class FacebookLogintest {
+WebDriver driver;
+
+@Given("^Browser as \"([^\"]*)\" And Url as \"([^\"]*)\"$")
+public void browser_as_And_Url_as(String browser, String url) throws Throwable {
+	if(browser.equals("Firefox"))
+	{
+		driver=new FirefoxDriver();
+	}
+	else if(browser.equals("IE"))
+	{
+		System.setProperty("webdriver.ie.driver", "D:\\Venkata Rami Reddy\\testing softwares\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
+	}
+	else if(browser.equals("chrome"))
+	{
+		System.setProperty("webdriver.chrome.driver","D:\\Venkata Rami Reddy\\testing softwares\\chromedriver.exe");
+		driver=new ChromeDriver();	 
+	}
+	driver.get(url);
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+}
+
+@When("^Username as \"([^\"]*)\" And Password as \"([^\"]*)\"$")
+public void username_as_And_Password_as(String arg1, String arg2) throws Throwable {
+   
+}
+
+@Then("^Facebook Should be login Sucessfully$")
+public void facebook_Should_be_login_Sucessfully() throws Throwable {
+    
+}
+
+}

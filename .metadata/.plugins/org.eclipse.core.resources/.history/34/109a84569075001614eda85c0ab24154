@@ -1,0 +1,61 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class Gmailllogin {
+	WebDriver driver;
+	@Given("^URL as \"([^\"]*)\" And browser as \"([^\"]*)\"$")
+	public void url_as_And_browser_as(String browser, String url ) throws Throwable {
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://accounts.google.com/ServiceLogin#identifier");
+	    
+	}
+
+	@When("^username is \"([^\"]*)\"$")
+	public void username_is(String username) throws Throwable {
+	    WebElement element=driver.findElement(By.id("Email"));
+	    element.clear();
+	    element.sendKeys("ramireddy591");
+	 
+	}
+	@When("^click is \"([^\"]*)\"$")
+	public void click_is() throws Throwable {
+		 WebElement element1=driver.findElement(By.id("next"));
+		    element1.click();;
+		   
+	   
+	}
+
+	@When("^password is \"([^\"]*)\"$")
+	public void password_is(String password) throws Throwable {
+		 WebElement element=driver.findElement(By.id("Email"));
+		    element.clear();
+		    element.sendKeys("ramireddy591");
+	   
+	}
+	@When("^Click is \"([^\"]*)\"$")
+	public void Click_is() throws Throwable {
+		 WebElement element3=driver.findElement(By.id("signIn"));
+		    element3.click();;
+		    
+	   
+	}
+
+	@Then("^Verify Gmail Home Page$")
+	public void verify_Gmail_Home_Page() throws Throwable {
+	    
+	}
+
+	@Then("^Gmail Home Page$")
+	public void gmail_Home_Page() throws Throwable {
+	   
+	    
+	}
+
+}

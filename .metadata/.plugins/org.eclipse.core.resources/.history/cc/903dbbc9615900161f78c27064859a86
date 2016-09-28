@@ -1,0 +1,76 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+
+public class Usexml {
+	WebDriver driver;
+	
+@Parameters ("url")
+	
+	@BeforeTest
+	public void setup(String url)
+	{
+		driver=new FirefoxDriver();
+		driver.manage().window().maximize();
+		System.out.println("URL of the application:" +url);
+		driver.get("https://accounts.google.com");
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		
+	}
+	@Test
+	public void mvr1()
+	{
+		//driver.findElement(By.id("email")).sendKeys("ramireddy591@gmail.com");
+		//driver.findElement(By.id("next")).click();
+		System.out.println("Hello Ramireddy");
+	}
+
+	@Test
+	public void mvr2()
+	{
+		
+		System.out.println("How are you");
+	}
+
+	@Test
+	public void mvr3()
+	{
+		
+		System.out.println("what going on");
+	}
+
+	@Test
+	public void mvr4()
+	{
+		
+		System.out.println("Today");
+	}
+
+	@Test
+	public void mvr5()
+	{
+		
+		System.out.println("Any Issues");
+	}
+
+	@Test
+	public void mvr6()
+	{
+		
+		System.out.println("In last class");
+	}
+
+	@Test
+	public void mvr7()
+	{
+		
+		System.out.println("Please Inform to me");
+	}
+
+}

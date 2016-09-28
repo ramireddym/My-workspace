@@ -1,0 +1,65 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+
+public class LinkedInlogin {
+	WebDriver driver;
+	@Given("^browser as \"([^\"]*)\" And URL as \"([^\"]*)\"$")
+	public void browser_as_And_URL_as(String arg1, String arg2) throws Throwable {
+		if(browser.equals("Firefox"))
+		{
+			driver=new FirefoxDriver();
+		}
+		else if(browser.equals("IE"))
+		{
+			System.setProperty("webdriver.ie.driver", "D:\\Venkata Rami Reddy\\testing softwares\\IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
+		}
+		else if(browser.equals("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver","D:\\Venkata Rami Reddy\\testing softwares\\chromedriver.exe");
+			 driver=new ChromeDriver();	 
+		}
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+	}
+
+	@When("^user logs in using Username  And Password$")
+	public void user_logs_in_using_Username_And_Password(DataTable arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
+	    throw new PendingException();
+	}
+
+	@Then("^login should be successful$")
+	public void login_should_be_successful() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^usernameramireddy(\\d+)@gmail\\.com and password(\\d+)$")
+	public void usernameramireddy_gmail_com_and_password(int arg1, int arg2) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^login functionality$")
+	public void login_functionality() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^usernamemareddy(\\d+)@gmail\\.com and password(\\d+)$")
+	public void usernamemareddy_gmail_com_and_password(int arg1, int arg2) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+}

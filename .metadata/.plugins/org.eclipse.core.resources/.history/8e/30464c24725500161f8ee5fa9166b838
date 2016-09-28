@@ -1,0 +1,22 @@
+package seleniumbasics;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Ace2three {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.ace2three.com/login.html");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(2000,TimeUnit.SECONDS);
+		driver.findElement(By.linkText("Play now")).click();
+		
+
+	}
+
+}

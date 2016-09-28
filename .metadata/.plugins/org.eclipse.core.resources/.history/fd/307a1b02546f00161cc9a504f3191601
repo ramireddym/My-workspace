@@ -1,0 +1,11 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class Sentsmspage {
+	WebDriver driver;
+	public Sentsmspage(WebDriver driver) {
+		this.driver=driver;	
+	}
+
+}

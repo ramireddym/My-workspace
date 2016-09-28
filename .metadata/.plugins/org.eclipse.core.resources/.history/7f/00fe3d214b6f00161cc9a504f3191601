@@ -1,0 +1,26 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class Addcontactpage {
+	WebDriver driver;
+	public Addcontactpage(WebDriver driver) {
+		this.driver=driver;	
+	}
+	public void addcontact(String name,String number)
+	{
+		driver.switchTo().defaultContent();
+		driver.findElement(By.id("aContacts")).click();
+		driver.findElement(By.id("addname")).sendKeys(name);
+		driver.findElement(By.id("addmob")).sendKeys(number);
+		driver.findElement(By.xpath("//input[@value='M'][@name='addgenval']")).isSelected();
+		driver.findElement(By.id("adddcon")).click();
+	}
+	public void search(String name)
+	{
+		driver.findElement(By.xpath("//input[@placeholder='Enter Name or Number']")).sendKeys(name);
+		driver.findElement(By.xpath("//span[@class='sp-inside cont-ser-ic']")).click();
+	}
+
+}

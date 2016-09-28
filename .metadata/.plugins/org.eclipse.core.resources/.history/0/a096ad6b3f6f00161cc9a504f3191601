@@ -1,0 +1,15 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class Addcontactpage {
+	WebDriver driver;
+	public Addcontactpage(WebDriver driver) {
+		this.driver=driver;	
+	}
+	public void addcontact(String name,String number)
+	{
+		driver.switchTo().defaultContent();
+	}
+
+}

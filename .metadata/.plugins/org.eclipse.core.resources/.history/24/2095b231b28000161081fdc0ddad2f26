@@ -1,0 +1,63 @@
+package Keyworddrivenframework;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.server.handler.GetElementAttribute;
+import org.openqa.selenium.remote.server.handler.GetElementDisplayed;
+import org.openqa.selenium.remote.server.handler.GetElementLocation;
+import org.openqa.selenium.remote.server.handler.GetElementText;
+
+public class ActionKeywords {
+	WebDriver driver;
+	public void openBrowser(String browsertype)
+	{
+		if(browsertype.equalsIgnoreCase("firefox"));
+		{
+			driver=new FirefoxDriver();
+		}
+		if(browsertype.equalsIgnoreCase("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver","D:\\Venkata Rami Reddy\\testing softwares\\chromedriver.exe");
+			driver=new ChromeDriver();	
+		}
+		if(browsertype.equalsIgnoreCase("IE"))
+		{
+			System.setProperty("webdriver.ie.driver", "D:\\Venkata Rami Reddy\\testing softwares\\IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+
+	}
+	public void openurl(String url)
+	{
+		driver.get(url);
+	}
+	public void typeEditBox(String uielement, String locatertype,String value)
+	{
+		WebElement ele=getElement(uielement,locatertype);
+		ele.clear();
+		ele.sendKeys(value);
+	}
+
+	public void clickButton(String uielement,String locatertype)
+	{
+		WebElement ele=getElement(uielement, locatertype);
+				ele.click();
+	}
+	public void typeEditBox1(String uielement, String locatertype,String value)
+	{
+		WebElement ele1=driver.findElement(By.id("Passwd"));
+	}
+	private WebElement getElement(String uielement, String locatertype) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

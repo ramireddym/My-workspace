@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;New.propertys&apos; to &apos;Xmlproject&apos;&#x0D;&#x0A;- Original project: &apos;Xmlproject&apos;&#x0D;&#x0A;- Destination element: &apos;Xmlproject&apos;&#x0D;&#x0A;- Original element: &apos;New.propertys&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="=Xmlproject" element1="src/selenium/testng/frames/New.propertys" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1472038510724" units="0" version="1.0"/>
+</session>
